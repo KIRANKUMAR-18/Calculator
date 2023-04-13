@@ -1,4 +1,6 @@
-package operations;
+package com.ultralesson.calculatortest.operations;
+
+import com.ultralesson.calculatortest.Calculation;
 
 public class Substraction implements Operation
 {
@@ -7,8 +9,11 @@ public class Substraction implements Operation
         return a-b;
     }
     @Override
-    public double calculate(double a, double b) {
-        return a - b;
+    public Calculation calculate(double a, double b) {
+        Calculation calculation = new Calculation("Substraction",a-b);
+        return calculation;
+
+
     }
     public double subtractMultipleNumbers(double[] numbers){
         double value = numbers[0];

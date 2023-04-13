@@ -1,4 +1,4 @@
-package com.ultralesson.calculator;
+package com.ultralesson.calculatortest;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -8,7 +8,7 @@ import java.util.List;
 public class CalculatorHistoryTest {
     @Test
     public void testCalculatorHistory() {
-        Calculator calculator = new Calculator();git init
+        Calculator calculator = new Calculator();
         CalculatorHistory calculatorHistory=new CalculatorHistory();
 
         calculatorHistory.addCalculation(new Calculation("10 + 20",calculator.addNumbers(10,20)));

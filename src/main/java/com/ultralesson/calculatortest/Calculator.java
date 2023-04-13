@@ -1,10 +1,16 @@
-package com.ultralesson.calculator;
+package com.ultralesson.calculatortest;
 
+import com.ultralesson.calculatortest.operations.*;
 import operations.*;
 
 import java.util.List;
 
 public class Calculator {
+    private CalculatorHistory calculatorHistory;
+
+    public Calculator() {
+        this.calculatorHistory = new CalculatorHistory();
+    }
     public int addNumbers(int num1, int num2) {
         try {
             return new Addition().add(num1, num2);
@@ -78,11 +84,20 @@ public class Calculator {
     }
 
 
-    public List<Calculation> getHistory(CalculatorHistory calculatorHistory){
+    public List<Calculation> getHistory(){
         return calculatorHistory.getHistory();
     }
-    public double performOperation(double a, double b, Operation operation) {
-        return operation.calculate(a, b);
+    public Calculation performOperation(double a, double b, Operation operation) {
+
+        Calculation calculate = operation.calculate(a, b);
+        //store in history
+        calculatorHistory.addCalculation(calculate);
+        return calculate;
+    }
+
+    public List<Calculation> getHistory(CalculatorHistory calculatorHistory) {
+        return calculatorHistory.getHistory();
+
     }
 }
 

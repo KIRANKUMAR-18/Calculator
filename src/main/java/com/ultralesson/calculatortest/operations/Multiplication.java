@@ -1,4 +1,6 @@
-package operations;
+package com.ultralesson.calculatortest.operations;
+
+import com.ultralesson.calculatortest.Calculation;
 
 public class Multiplication implements Operation {
     public int multiply(int a, int b) {
@@ -6,8 +8,10 @@ public class Multiplication implements Operation {
         return a*b;
     }
     @Override
-    public double calculate(double a, double b) {
-        return a * b;
+    public Calculation calculate(double a, double b) {
+        Calculation calculation = new Calculation("Multiplication",a*b);
+        return calculation;
+
     }
         public double multiplyMultipleNumbers ( double[] numbers){
             double value = numbers[0];

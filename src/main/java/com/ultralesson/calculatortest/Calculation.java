@@ -1,4 +1,4 @@
-package com.ultralesson.calculator;
+package com.ultralesson.calculatortest;
 
 public class Calculation {
     private String input;

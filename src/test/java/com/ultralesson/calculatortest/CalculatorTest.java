@@ -1,4 +1,4 @@
-package com.ultralesson.calculator;
+package com.ultralesson.calculatortest;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
